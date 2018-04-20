@@ -1,0 +1,32 @@
+/* Box-sizing reset */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Fluid typography */
+
+html {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 480px) / (1600 - 480));
+  }
+}
+
+/* Print adjustments */
+
+@media print {
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+}
